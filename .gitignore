@@ -1,5 +1,6 @@
 # IntelliJ specific
 .idea
+.target
 mongodb-tests.iml
 
 # Compiled class file
