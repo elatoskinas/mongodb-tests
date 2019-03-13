@@ -1,3 +1,5 @@
+package basic;
+
 public abstract class Abstraction {
     private int number1;
     private int number2;
