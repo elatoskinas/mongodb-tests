@@ -1,4 +1,4 @@
-package basic;
+package abstractModel;
 
 import java.util.ArrayList;
 import java.util.List;

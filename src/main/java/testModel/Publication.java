@@ -1,9 +1,11 @@
-package mapping;
+package testModel;
 
-import org.mongodb.morphia.annotations.Entity;
-import org.mongodb.morphia.annotations.Id;
+import org.mongodb.morphia.annotations.*;
 
-@Entity("Publication")
+import static org.mongodb.morphia.utils.IndexType.TEXT;
+
+@Entity
+@Indexes(@Index(fields = @Field(value = "$**", type = TEXT)))
 public class Publication {
     @Id
     private int publicationId;
@@ -11,6 +13,19 @@ public class Publication {
     private String issue;
     private String pages;
     private int year;
+
+    @Override
+    public String toString() {
+        return "Publication{" +
+                "publicationId=" + publicationId +
+                ", title='" + title + '\'' +
+                ", issue='" + issue + '\'' +
+                ", pages='" + pages + '\'' +
+                ", year=" + year +
+                '}';
+    }
+
+    public Publication() {}
 
     public Publication(int publicationId, String title, String issue, String pages, int year) {
         this.publicationId = publicationId;

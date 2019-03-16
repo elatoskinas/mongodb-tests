@@ -1,4 +1,4 @@
-package basic;
+package abstractModel;
 
 public abstract class Abstraction {
     private int number1;

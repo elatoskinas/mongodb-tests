@@ -1,9 +1,12 @@
-package mapping;
+package testModel;
 
-import org.mongodb.morphia.annotations.Entity;
-import org.mongodb.morphia.annotations.Reference;
+import org.mongodb.morphia.annotations.*;
 
-@Entity("OntologyRelation")
+@Entity
+@Indexes({
+       @Index(fields = @Field("parentTerm")),
+       @Index(fields = @Field("childTerm"))
+})
 public class OntologyRelation {
     @Reference(idOnly = true)
     private OntologyTerm parentTerm;

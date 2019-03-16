@@ -1,11 +1,11 @@
-package mapping;
+package testModel;
 
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Reference;
 
 import java.util.ArrayList;
 
-@Entity("Author")
+@Entity
 public class Author {
     private String firstName;
     private String lastName;
@@ -14,6 +14,8 @@ public class Author {
 
     @Reference(idOnly = true)
     private ArrayList<Publication> publications;
+
+    public Author() {}
 
     public Author(String firstName, String lastName, String name, String initials, ArrayList<Publication> publications) {
         this.firstName = firstName;

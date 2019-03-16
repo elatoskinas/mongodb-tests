@@ -1,5 +1,7 @@
-package basic;
+package mongoTesting;
 
+import abstractModel.AbstractionImpl;
+import abstractModel.AbstractionImpl2;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.mongodb.MongoClient;
 

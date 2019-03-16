@@ -1,9 +1,8 @@
-package mapping;
+package testModel;
 
 import org.mongodb.morphia.annotations.Entity;
-import org.mongodb.morphia.annotations.Id;
 
-@Entity("OntologyEvidence")
+@Entity
 public class OntologyEvidence {
     OntologyAnnotationEvidenceCode code;
 

@@ -1,14 +1,11 @@
-package mapping;
+package mongoTesting;
 
-import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
 import org.mongodb.morphia.query.Query;
 import org.mongodb.morphia.query.UpdateOperations;
-import org.mongodb.morphia.query.UpdateOpsImpl;
+import testModel.*;
 
 import java.util.ArrayList;
 

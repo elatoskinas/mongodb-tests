@@ -1,9 +1,9 @@
-package mapping;
+package testModel;
 
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
-@Entity("OntologyTerm")
+@Entity
 public class OntologyTerm {
     @Id
     private String identifier;
@@ -63,5 +63,16 @@ public class OntologyTerm {
 
     public void setObsolete(boolean obsolete) {
         this.obsolete = obsolete;
+    }
+
+    @Override
+    public String toString() {
+        return "OntologyTerm{" +
+                "identifier='" + identifier + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", namepsace='" + namepsace + '\'' +
+                ", obsolete=" + obsolete +
+                '}';
     }
 }

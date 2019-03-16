@@ -1,4 +1,4 @@
-package basic;
+package abstractModel;
 
 public class AbstractionImpl extends Abstraction {
     public AbstractionImpl(int number1, int number2, String string1) {

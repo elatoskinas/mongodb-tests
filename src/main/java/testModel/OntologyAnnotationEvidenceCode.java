@@ -1,4 +1,4 @@
-package mapping;
+package testModel;
 
 public class OntologyAnnotationEvidenceCode {
     private String code;
