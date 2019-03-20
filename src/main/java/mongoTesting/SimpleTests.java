@@ -27,7 +27,11 @@ public class SimpleTests {
         testPopulate(collection);
     }
 
-    public static void testPopulate(MongoCollection collection)
+    /**.
+     * Populatees a MongoCollection (Testing purposes)
+     * @param collection - collection to populate
+     */
+    private static void testPopulate(MongoCollection collection)
     {
         AbstractionImpl o1 = new AbstractionImpl(15, 25, "text");
         AbstractionImpl o2 = new AbstractionImpl(55, 40, "abc");
@@ -51,11 +55,21 @@ public class SimpleTests {
         addToCollection(collection, a2);
     }
 
-    public static void addToCollection(MongoCollection collection, Object object)
+    /**.
+     * Adds a single object to a specified collection
+     * @param collection - MongoCollection to add to
+     * @param object - Objct to add
+     */
+    private static void addToCollection(MongoCollection collection, Object object)
     {
         collection.insertOne(convertToDocument(object));
     }
 
+    /**.
+     * Maps object to Document by converting it to JSON
+     * @param object - object to map
+     * @return MongoDB Document, which represents the specified object
+     */
     private static Document convertToDocument(Object object)
     {
         ObjectMapper objectMapper = new ObjectMapper();
