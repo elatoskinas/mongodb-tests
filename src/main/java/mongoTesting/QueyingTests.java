@@ -73,5 +73,12 @@ public class QueyingTests {
 
         Query<Publication> publicationSort =
                 datastore.createQuery(Publication.class).project("title", true).order(sorts);
+
+
+        // An example of previewing results
+        for (Publication p : publicationSort)
+        {
+            System.out.println(p);
+        }
     }
 }
