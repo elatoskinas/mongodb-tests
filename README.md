@@ -1,7 +1,7 @@
 # mongodb-tests
 Some MongoDB Java Driver & Morphia testing to see how things work in MongoDB & Java.
 
-# Classees of interest
+# Classes of interest
 ## testModel
 Contains a test model for a small database. Based on [Intermine's data model](https://github.com/intermine/intermine)
 
